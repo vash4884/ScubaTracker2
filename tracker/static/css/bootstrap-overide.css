@@ -1,0 +1,38 @@
+.navbar-inverse .navbar-inner{
+background-image: -moz-linear-gradient(top, #000000, #000000);
+
+background-image: -webkit-linear-gradient(top, #000000, #000000);
+
+background-image: -o-linear-gradient(top, #000000, #000000);
+
+background-image: linear-gradient(to bottom, #000000, #000000);
+}
+.navbar-inverse .brand, .navbar-inverse .nav > li > a {
+    color: #dbd4d4;
+    overflow: hidden;
+    z-index: 10000;
+}
+.dropdown-menu {
+    background-color: #000000;
+
+}
+.dropdown-menu li {
+    position: absolute;
+}
+.dropdown-menu ul {
+    width: 100%;
+    top: 0;
+}
+.content {
+    margin-top:30px;
+    padding:20px;
+}
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
