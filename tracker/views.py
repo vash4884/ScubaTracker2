@@ -25,7 +25,7 @@ import shutil
 import re
 import time
 
-
+print("IN VIEWS")
 def index (request):
         print("in index")
         # person = instructor()
@@ -38,14 +38,18 @@ def index (request):
 
 def addInstructor (request):
     if request.method =='POST':
-        print("BLAH")
+        form  = instructorNameForm(request.POST)
+        model = form.save(commit = False)
+        model.routeID = str(uuid.uuid4())
+        model.save()
+        return HttpResponseRedirect(reverse('instructorListView',))
     else:
         form = instructorNameForm()
         return render(request, "addInstructor.html", {'form': form,}, )
     return render(request, "addInstructor.html", { },)
 
 def instructorListView(request):
-    return HttpResponse("howdy asshole welcome to jackass")
+    #return HttpResponse("howdy asshole welcome to jackass")
     print("view")
 
     instructors = instructor.objects.all()
